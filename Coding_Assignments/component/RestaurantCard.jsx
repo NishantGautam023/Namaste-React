@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-export default function Restaurant(props) {
+export default function RestaurantCard(props) {
     const { restaurant} = props;
     const imageUrl = `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_308,h_220,c_fill/${restaurant.cloudinaryImageId}`
     return(

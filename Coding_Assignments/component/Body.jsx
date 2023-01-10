@@ -1,5 +1,5 @@
 import React from "react";
-import RestaurantList from "./RestaurantList";
+import RestaurantCard from "./RestaurantCard";
 
 const searchbar = (
     <div className="search">
@@ -22,7 +22,15 @@ export default function Body() {
                     {searchbar}
            
                     <div className="main">
-                        <RestaurantList />
+                    <div className="container-icon">
+                                   
+                                   {
+                                       restaurantList.map(restaurant => {
+                                           return <RestaurantCard restaurant={restaurant.data} key={restaurant.data.id}  />
+                                       })
+                                   }
+       
+                               </div>
 
                     </div>
 
