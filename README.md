@@ -23,9 +23,7 @@ This repository comprises my assignments and class notes I maintained while bein
 ```
     
 
-## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
 
 Review and raise PR if any clarifications or improvements are required. 
 
