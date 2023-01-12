@@ -3,9 +3,9 @@ import {createRoot} from "react-dom/client";
 // import logoImage from "./assets/logo.jpg";
 // import userIcon from "./assets/userIcon.png"
 
-import Header from "./component/Header"
-import Body from './component/Body'
-import Footer from "./component/Footer"
+import Header from "./components/Header"
+import Body from './components/Body'
+import Footer from "./components/Footer"
 
 
 
