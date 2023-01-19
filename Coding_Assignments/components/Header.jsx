@@ -1,29 +1,33 @@
 import React from "react";
 import logoImage from "../assets/logo.jpg"
 import checkoutcart from "../assets/checkout.jpg"
-
+import { Link } from "react-router-dom";
 
 const navitems = (
         <>
                 <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
+                    
+                        <Link to="/">
+                             <li>Home</li>
+                        </Link>
+                    
 
-                    <li>
-                        <a href="#">About Us</a>
-                    </li>
+                        <Link to="/about">
+                             <li>About</li>
+                        </Link>
 
-                    <li>
-                        <a href="#">Pricing</a>
-                    </li>
+                        <Link to="/pricing">
+                             <li>Pricing</li>
+                        </Link>
+                    
+                    
 
                 </ul>
 
                 <span className="btn-wrap">
-                    <a href="/" className="logo-wrap">
+                    <Link to="/" className="logo-wrap">
                         <img src={checkoutcart} alt="" height="70" width="70" />
-                    </a>
+                    </Link>
                  </span>
         </>
 )
