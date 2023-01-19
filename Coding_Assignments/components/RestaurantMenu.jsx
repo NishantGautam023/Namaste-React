@@ -6,7 +6,7 @@ import Shimmer from "./Shimmer"
 const RestaurantMenu = () => {
     const [restaurant, setRestaurant] = useState(null)
     const params = useParams();
-    const {id} = params;
+    const {resId} = params;
 
     useEffect(() => {
         getRestaurantInfo();
@@ -19,7 +19,7 @@ const RestaurantMenu = () => {
         );
         const json = await data.json();
         console.log(json.data);
-        setRestauraunt(json.data);
+        setRestaurant(json.data);
       }
     
 

@@ -37,9 +37,9 @@ const Header = ()=> {
     return (
         <> 
              <header>
-                    <a href="/" className="logo-wrap">
+                    <Link to="/" className="logo-wrap">
                       <img src={logoImage} alt="" height="70" width="70" />
-                    </a>
+                    </Link>
                 
                 {navitems}
             </header>        
