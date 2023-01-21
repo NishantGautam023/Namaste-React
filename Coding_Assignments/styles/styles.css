@@ -291,6 +291,16 @@ footer h3 {
 
 }
 
+.label {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.2rem;
+  background-color: #e2e8f0;
+  color: #888;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
 
 /*----------------------RestaurantMenu Closes ----------------------------------------*/
 
@@ -362,7 +372,10 @@ img {
 }
 
 
-
+.total-items {
+  text-align: center;
+  margin: 12px;
+}
 
 
 

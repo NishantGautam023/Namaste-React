@@ -39,8 +39,9 @@ const RestaurantMenu = () => {
                          src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
                          alt="" />
                     <div className="menu-info">
-                        <h3>Cheese & Grill Restaurant</h3>
+                        <h3>{restaurant?.name}</h3>
                         <span>ID: {resId} </span>
+                        <span className="label">{restaurant?.cuisines.join(", ")}</span>
                         <span>Address: {restaurant?.area}</span>
                     </div>
                     <ul className="header-menu-list">
@@ -48,8 +49,9 @@ const RestaurantMenu = () => {
                             <span className="ratings" aria-hidden="true"></span> {restaurant?.avgRating} ⭐
                         </li>
                         <li>
-                            <span className="ratings" aria-hidden="true"></span>  ₹{restaurant?.costForTwo} for Two
+                            <span className="ratings" aria-hidden="true"></span>  ₹{(restaurant?.costForTwo)/100} for Two
                         </li>
+
                     </ul>
                     <button className="menu-button">Book a Table</button>
                 </div>
@@ -61,13 +63,17 @@ const RestaurantMenu = () => {
     const RestaurantMenuCart = () => {
         return (
             <>
-                <div className="menu-description-container">
-                    <img className="menu-img"
-                         src="https://images.pexels.com/photos/8148587/pexels-photo-8148587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100"
-                         alt=""/>
+                {Object.values(restaurant?.menu.items).map(item =>
+                    <div className="menu-description-container">
+
+
+                        <img className="menu-img"
+                             src={IMG_CDN_URL + item?.cloudinaryImageId}
+                             alt={item?.name}/>
+
                         <div className="menu-desc">
-                            <h3>Stylish Tote Bag</h3>
-                            <p>Brown Color Women's Tote Bag</p>
+                            <h3>{item?.name}</h3>
+                            <p>{item?.description}</p>
                             <div className="desc-id">#368798</div>
                         </div>
                         <div>
@@ -78,7 +84,16 @@ const RestaurantMenu = () => {
                             $99.00
                         </div>
 
-                </div>
+
+
+
+
+
+
+                    </div>
+
+                )}
+
             </>
         )
     }
@@ -92,7 +107,10 @@ const RestaurantMenu = () => {
 
             <div>
                 <RestaurantMenuHeader />
-                <RestaurantMenuCart />
+                <span className="total-items">We have   {Object.keys(restaurant?.menu?.items).length} ITEMS</span>
+                {Object.values(restaurant?.menu?.items).map((item) => (
+                    <RestaurantMenuCart key={item.id} />
+                ))}
 
 
 
