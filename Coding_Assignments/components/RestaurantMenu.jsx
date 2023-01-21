@@ -85,7 +85,7 @@ const RestaurantMenu = () => {
                             <input className="menu-input" type="text"  size="1"/>
                         </div>
                         <div className="price">
-                            ₹99
+                            ₹{item?.price / 100}
 
                         </div>
 
