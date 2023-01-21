@@ -5,33 +5,9 @@ import Shimmer from "./Shimmer"
 
 
 
-const RestaurantMenuHeader = () => {
-    return (
-        <>
 
-            <div className="header-menu-container">
-                <img className="menu-img"
-                     src="https://images.pexels.com/photos/5745991/pexels-photo-5745991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200"
-                     alt="" />
-                    <div className="menu-info">
-                        <h3>Cheese & Grill Restaurant</h3>
-                        <span>ID: </span>
-                        <span>Address: St. Marks Street</span>
-                    </div>
-                    <ul className="header-menu-list">
-                        <li>
-                            <span className="fa fa-check" aria-hidden="true"></span> 4.4 ⭐
-                        </li>
-                        <li>
-                            <span className="fa fa-check" aria-hidden="true"></span> 500 for Two
-                        </li>
-                    </ul>
-                    <button className="menu-button">Book a Table</button>
-            </div>
 
-        </>
-    )
-}
+
 
 
 
@@ -53,34 +29,77 @@ const RestaurantMenu = () => {
         console.log(json.data);
         setRestaurant(json.data);
       }
-    
+
+    const RestaurantMenuHeader = () => {
+        return (
+            <>
+
+                <div className="header-menu-container">
+                    <img className="menu-img"
+                         src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
+                         alt="" />
+                    <div className="menu-info">
+                        <h3>Cheese & Grill Restaurant</h3>
+                        <span>ID: {resId} </span>
+                        <span>Address: {restaurant?.area}</span>
+                    </div>
+                    <ul className="header-menu-list">
+                        <li>
+                            <span className="ratings" aria-hidden="true"></span> {restaurant?.avgRating} ⭐
+                        </li>
+                        <li>
+                            <span className="ratings" aria-hidden="true"></span>  ₹{restaurant?.costForTwo} for Two
+                        </li>
+                    </ul>
+                    <button className="menu-button">Book a Table</button>
+                </div>
+
+            </>
+        )
+    }
+
+    const RestaurantMenuCart = () => {
+        return (
+            <>
+                <div className="menu-description-container">
+                    <img className="menu-img"
+                         src="https://images.pexels.com/photos/8148587/pexels-photo-8148587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100"
+                         alt=""/>
+                        <div className="menu-desc">
+                            <h3>Stylish Tote Bag</h3>
+                            <p>Brown Color Women's Tote Bag</p>
+                            <div className="desc-id">#368798</div>
+                        </div>
+                        <div>
+                            <label>Quantity :</label>
+                            <input className="menu-input" type="text" value="1" size="1"/>
+                        </div>
+                        <div className="price">
+                            $99.00
+                        </div>
+
+                </div>
+            </>
+        )
+    }
+
 
       return !restaurant ? (
         <Shimmer />
       ) : (
-          <div>
-              <RestaurantMenuHeader />
 
-        <div className="menu">
-          <div>
-            <h1>Restraunt id: {resId}</h1>
-            <h2>{restaurant?.name}</h2>
-            <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId} />
-            <h3>{restaurant?.area}</h3>
-            <h3>{restaurant?.city}</h3>
-            <h3>{restaurant?.avgRating} stars</h3>
-            <h3>{restaurant?.costForTwoMsg}</h3>
-          </div>
-          <div>
-            <h1>Menu</h1>
-            <ul>
-              {Object.values(restaurant?.menu?.items).map((item) => (
-                <li key={item.id}>{item.name}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-          </div>
+
+
+            <div>
+                <RestaurantMenuHeader />
+                <RestaurantMenuCart />
+
+
+
+
+            </div>
+
+
       );
 }
 

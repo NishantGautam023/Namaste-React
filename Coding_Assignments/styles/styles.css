@@ -280,7 +280,7 @@ footer h3 {
   cursor: pointer;
 }
 
-/* Generic Styles End */
+
 
 .header-menu-container {
   display: grid;
@@ -290,3 +290,83 @@ footer h3 {
   background: aliceblue;
 
 }
+
+
+/*----------------------RestaurantMenu Closes ----------------------------------------*/
+
+
+/*--------RestaurantMenu Shopping Cart -----------------------------------*/
+/* Generic Styles */
+
+
+/*
+body {
+  background-color: #f1f5f9;
+  color: #333;
+  line-height: 1.4;
+} */
+
+.menu-desc h3
+{
+  margin: 0;
+}
+.menu-desc p {
+  margin:0;
+}
+
+
+.menu-description-container {
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: white;
+  padding: 2rem;
+}
+
+img {
+  width: 4.8rem;
+  height: 4.8rem;
+  object-fit: cover;
+}
+
+.menu-desc-span {
+  color: #777;
+  font-size: 0.8rem;
+}
+.desc-id {
+  color:#0891b2;
+}
+
+
+.menu-input {
+  margin-top: 0.2rem;
+  padding: 4px 8px;
+  border: solid 1px #999;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Generic Styles End */
+
+.menu-description-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 2rem 1rem;
+  justify-content: space-between;
+}
+
+.price {
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+/*-------------Shopping Cart closes-----------------------------*/
