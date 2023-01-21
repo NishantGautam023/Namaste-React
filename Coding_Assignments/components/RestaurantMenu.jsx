@@ -85,7 +85,8 @@ const RestaurantMenu = () => {
                             <input className="menu-input" type="text"  size="1"/>
                         </div>
                         <div className="price">
-                            ₹{item?.price / 100}
+                            {(item?.price > 0) ?
+                            new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR'}).format(item?.price/100 ): " " }
 
                         </div>
 
