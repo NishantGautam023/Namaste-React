@@ -7,14 +7,17 @@ import Shimmer from "./Shimmer"
 
 
 
-
-
-
-
 const RestaurantMenu = () => {
     const [restaurant, setRestaurant] = useState(null)
     const params = useParams();
     const {resId} = params;
+
+
+
+
+
+
+
 
     useEffect(() => {
         getRestaurantInfo();
@@ -64,6 +67,7 @@ const RestaurantMenu = () => {
         return (
             <>
                 {Object.values(restaurant?.menu.items).map(item =>
+
                     <div className="menu-description-container">
 
 
@@ -74,14 +78,15 @@ const RestaurantMenu = () => {
                         <div className="menu-desc">
                             <h3>{item?.name}</h3>
                             <p>{item?.description}</p>
-                            <div className="desc-id">#368798</div>
+                            <div className="desc-id">#3333</div>
                         </div>
                         <div>
                             <label>Quantity :</label>
-                            <input className="menu-input" type="text" value="1" size="1"/>
+                            <input className="menu-input" type="text"  size="1"/>
                         </div>
                         <div className="price">
-                            $99.00
+                            ₹99
+
                         </div>
 
 
@@ -108,9 +113,9 @@ const RestaurantMenu = () => {
             <div>
                 <RestaurantMenuHeader />
                 <span className="total-items">We have   {Object.keys(restaurant?.menu?.items).length} ITEMS</span>
-                {Object.values(restaurant?.menu?.items).map((item) => (
-                    <RestaurantMenuCart key={item.id} />
-                ))}
+
+                    <RestaurantMenuCart />
+
 
 
 
