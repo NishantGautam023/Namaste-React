@@ -223,3 +223,70 @@ footer h3 {
   background: lightgrey;
   margin: 20px;
 }
+
+/*---------Shimmer UI closes----------------------  */
+
+
+/*------------For the RestaurantMenu------------------------*/
+
+
+
+
+.header-menu-container {
+  padding: 2rem;
+  background-color: #e2e8f0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.menu-info h3 {
+  margin: 0;
+}
+
+.menu-info span {
+  font-size: 0.9rem;
+}
+
+.header-menu-container {
+  background-color: white;
+  padding: 1.5rem;
+  min-width: 600px;
+}
+
+.menu-img {
+  display: block;
+  width: 8rem;
+  height: 6rem;
+  object-fit: cover;
+}
+
+.header-menu-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+.menu-button {
+  border: none;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #16a34a;
+  border-radius: 0.5rem;
+  background-color: #16a34a;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* Generic Styles End */
+
+.header-menu-container {
+  display: grid;
+  grid-template-columns: max-content auto auto fit-content(100%);
+  align-items: center;
+  column-gap: 1.5rem;
+  background: aliceblue;
+
+}
