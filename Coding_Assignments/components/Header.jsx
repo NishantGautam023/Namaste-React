@@ -2,6 +2,7 @@ import React from "react";
 import logoImage from "../assets/logo.jpg"
 import checkoutcart from "../assets/checkout.jpg"
 import { Link } from "react-router-dom";
+import ToggleTheme from "./ToggleTheme";
 
 const navitems = (
         <>
@@ -19,14 +20,18 @@ const navitems = (
                         <Link to="/pricing">
                              <li>Pricing</li>
                         </Link>
+
+                    <ToggleTheme />
                     
-                    
+
 
                 </ul>
 
                 <span className="btn-wrap">
                     <Link to="/" className="logo-wrap">
+
                         <img src={checkoutcart} alt="" height="70" width="70" />
+
                     </Link>
                  </span>
         </>
@@ -36,7 +41,7 @@ const navitems = (
 const Header = ()=> {
     return (
         <> 
-             <header>
+             <header className>
                     <Link to="/" className="logo-wrap">
                       <img src={logoImage} alt="" height="70" width="70" />
                     </Link>

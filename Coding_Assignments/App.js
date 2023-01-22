@@ -37,7 +37,7 @@ const appRouter  = createBrowserRouter([
     
       },
       {
-          path: "/pricing",
+          path:     "/pricing",
           element: <Pricing />
        }, 
        {

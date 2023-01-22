@@ -81,8 +81,7 @@ const RestaurantMenu = () => {
                             <div className="desc-id">#3333</div>
                         </div>
                         <div>
-                            <label>Quantity :</label>
-                            <input className="menu-input" type="text"  size="1"/>
+                            <button className="menu-button">Add </button>
                         </div>
                         <div className="price">
                             {(item?.price > 0) ?

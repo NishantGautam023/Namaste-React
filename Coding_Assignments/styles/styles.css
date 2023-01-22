@@ -453,3 +453,17 @@ img {
 
 
 /*-------------Shopping Cart closes-----------------------------*/
+
+
+
+/*------------Implementing Dark and Light Mode  ---------------------------*/
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: orangered;
+  color: #222;
+}
+
