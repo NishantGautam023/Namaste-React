@@ -5,6 +5,8 @@ const ToggleTheme = () => {
     const [settings, setSettings] = useState({
         dark_theme: true
     })
+    const [isLogged, setIsLogged] = useState(false
+    )
 
     function handleToggleClick() {
         setSettings({
@@ -13,12 +15,23 @@ const ToggleTheme = () => {
         })
     }
 
+    function handleLoginClick() {
+        setIsLogged(!isLogged)
+
+
+    }
+
+
     const className = settings.dark_theme ? "dark" : "light"
 
 
     return (
         <>
-                <button onClick={handleToggleClick} className={className}>Login</button>
+                <button onClick={() => {
+                    handleLoginClick();
+                    handleToggleClick();
+                }
+                } className={className}>{isLogged ? "Login" : "Logout"}</button>
 
         </>
     )
