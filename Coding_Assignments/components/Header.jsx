@@ -3,6 +3,7 @@ import logoImage from "../assets/logo.jpg"
 import checkoutcart from "../assets/checkout.jpg"
 import { Link } from "react-router-dom";
 import ToggleTheme from "./ToggleTheme";
+import FAQ from "./FAQ"
 
 const navitems = (
         <>
@@ -21,9 +22,13 @@ const navitems = (
                              <li>Pricing</li>
                         </Link>
 
-                    <ToggleTheme />
-                    
 
+
+                    <Link to="/faq">
+                        <li>FAQ</li>
+                    </Link>
+
+                    <ToggleTheme />
 
                 </ul>
 
