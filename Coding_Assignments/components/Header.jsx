@@ -3,7 +3,7 @@ import logoImage from "../assets/logo.jpg"
 import checkoutcart from "../assets/checkout.jpg"
 import { Link } from "react-router-dom";
 import ToggleTheme from "./ToggleTheme";
-import Faq from "./Faq"
+
 
 const navitems = (
         <>

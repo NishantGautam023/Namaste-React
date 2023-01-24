@@ -3,7 +3,7 @@ import  ReactDOM from "react-dom/client";
 import Header from "./components/Header"
 import Body from './components/Body'
 import Footer from "./components/Footer"
-import About from "./components/About"
+// import About from "./components/About"
 import Pricing  from "./components/Pricing";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -11,8 +11,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 
 import Shimmer from "./components/Shimmer";
 
-const Faq = lazy(() => import("./components/Faq"))
-
+const Faq = lazy(() => import("./components/Faq"));
+const About = lazy(() => import("./components/About"));
 const AppLayout = () => {
   return (
     <>
@@ -33,9 +33,23 @@ const appRouter  = createBrowserRouter([
           path:"/",
           element: <Body />
         },
-        {
+          {
+              path: "/faq",
+              element: (
+                  <Suspense fallback={<h1>Loading....</h1>}>
+                      <Faq />
+                  </Suspense>
+              )
+
+
+          },
+          {
           path: "/about",
-          element: <About/>
+          element: (
+              <Suspense fallback={<h1>Loading....</h1>}>
+                  <About />
+              </Suspense>
+          )
     
     
       },
@@ -47,15 +61,8 @@ const appRouter  = createBrowserRouter([
        {
         path:"/restaurant/:resId",
         element: <RestaurantMenu />
-       },
-          {
-              path:"/faq",
-              // Can give fallback as Shimmer also
-              element: <Suspense fallback = {<h1> Loading .......</h1>} >
-                  <Faq  />
-              </Suspense>
-          },
-      ]
+       }
+               ]
   }, 
 
 ])
