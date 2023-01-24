@@ -1,24 +1,18 @@
-import { faqs } from "../constant";
+import React, { useState } from 'react';
+
 import AccordionItem from "./AccordionItem";
-import {useState} from "react";
 
-const Accordion = () => {
-    const [clicked, setClicked] = useState("0")
-
-    const handleToggle = (index) => {
-        if(clicked === index){
-            return setClicked("0")
-        }
-        setClicked(index)
-    }
-
+const Accordion = ({ title, content }) => {
+    const [isActive, setIsActive] = useState(false);
 
     return (
-        <ul className="accordion">
-            {faqs.map((faq, index) => (
-                <AccordionItem key={index} faq={faq} onToggle={() => handleToggle(index)} active = {clicked === index}  />
-            ))}
-        </ul>
+        <div className="accordion-item">
+            <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+                <div>{title}</div>
+                <div>{isActive ? '-' : '+'}</div>
+            </div>
+            {isActive && <div className="accordion-content">{content}</div>}
+        </div>
     );
 };
 
