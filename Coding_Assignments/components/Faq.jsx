@@ -1,4 +1,4 @@
-const FAQ = () => {
+const Faq = () => {
     return (
         <>
             <h1>FAQ consisting of accordings</h1>
@@ -6,4 +6,5 @@ const FAQ = () => {
     )
 }
 
-export default FAQ ;
+
+export default Faq ;

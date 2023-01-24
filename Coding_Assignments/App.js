@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, {lazy, Suspense} from "react";
 import  ReactDOM from "react-dom/client";
 import Header from "./components/Header"
 import Body from './components/Body'
@@ -8,8 +8,11 @@ import Pricing  from "./components/Pricing";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
-import FAQ from "./components/FAQ";
+
 import Shimmer from "./components/Shimmer";
+
+const Faq = lazy(() => import("./components/Faq"))
+
 const AppLayout = () => {
   return (
     <>
@@ -36,6 +39,7 @@ const appRouter  = createBrowserRouter([
     
     
       },
+
       {
           path:     "/pricing",
           element: <Pricing />
@@ -46,10 +50,11 @@ const appRouter  = createBrowserRouter([
        },
           {
               path:"/faq",
-              element: <Suspense fallback = {<Suspense />} >
-                  <FAQ  />
+              // Can give fallback as Shimmer also
+              element: <Suspense fallback = {<h1> Loading .......</h1>} >
+                  <Faq  />
               </Suspense>
-          }
+          },
       ]
   }, 
 
