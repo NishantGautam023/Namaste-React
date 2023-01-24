@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 import  ReactDOM from "react-dom/client";
 import Header from "./components/Header"
 import Body from './components/Body'
@@ -9,7 +9,7 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import FAQ from "./components/FAQ";
-
+import Shimmer from "./components/Shimmer";
 const AppLayout = () => {
   return (
     <>
@@ -46,7 +46,9 @@ const appRouter  = createBrowserRouter([
        },
           {
               path:"/faq",
-              element: <FAQ />
+              element: <Suspense fallback = {<Suspense />} >
+                  <FAQ  />
+              </Suspense>
           }
       ]
   }, 

@@ -1,4 +1,4 @@
-import React from "react";
+import React , {lazy, Suspense} from "react";
 import logoImage from "../assets/logo.jpg"
 import checkoutcart from "../assets/checkout.jpg"
 import { Link } from "react-router-dom";
