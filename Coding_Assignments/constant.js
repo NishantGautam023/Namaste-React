@@ -7,26 +7,17 @@ export const FETCH_MENU_URL = "https://www.swiggy.com/dapi/menu/v4/full?lat=12.9
 
 export const accordionData = [
   {
-    title: 'Section 1',
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore, hic temporibus velit dicta earum
-      suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-      voluptatem.`
+    title: 'What is our Customer Care Number',
+    content: `We value our customer’s time and hence moved away from a single customer care number to a comprehensive chat-based support system for quick and easy resolution. You no longer have to go through the maze of an IVRS call support. Just search for your issue in the help section on this page and initiate a chat with us. 
+    A customer care executive will be assigned to you shortly. You can also email us your issue on support@swiggy.in`
   },
   {
-    title: 'Section 2',
-    content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-      reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
-      quaerat iure quos dolorum accusantium ducimus in illum vero commodi
-      pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
-      quidem maiores doloremque est numquam praesentium eos voluptatem amet!
-      Repudiandae, mollitia id reprehenderit a ab odit!`
+    title: 'I want to explore opportunities with the Company',
+    content: `Join our team. Send us an Email`
   },
   {
-    title: 'Section 3',
-    content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
-      quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
-      dolor ut sequi minus iste? Quas?`
+    title: 'I want to provide feeback',
+    content: `Quantity and quality of the food is the restaurants' responsibility. However in case of issues with the quality or quantity, kindly submit your feedback and we will pass it on to the restaurant.`
   }
 ];
 

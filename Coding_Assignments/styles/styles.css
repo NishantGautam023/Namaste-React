@@ -468,11 +468,15 @@ img {
 }
 
 
-/*-------------Implementing the Accordin --------------------*/
+/*-------------Implementing the Accordion --------------------*/
 
 .accordion {
   max-width: 600px;
   margin: 2rem auto;
+  background-color: #e0f2fe;
+  font-size: 0.9rem;
+
+
 }
 
 .accordion-title {
@@ -480,11 +484,11 @@ img {
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #21aeca;
+  font-size: 2rem;
 }
 
 .accordion-title:hover {
-  background-color: #3ab4cc;
+  /*background-color: orangered;*/
 }
 
 .accordion-title,
@@ -493,5 +497,5 @@ img {
 }
 
 .accordion-content {
-  background-color: #39b9d2;
+  /*background-color: #39b9d2;*/
 }
