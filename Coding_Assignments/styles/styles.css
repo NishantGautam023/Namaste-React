@@ -3,13 +3,25 @@
 }
 
 
+body {
+  --primary-bg: rgb(255, 255, 255);
+  --primary-copy: rgb(50, 52, 65);
+  --toggle-bg: #ccc;
+  --toggle-color: #ffffff;
+}
+
+body.dark {
+  --primary-bg: rgb(50, 52, 65);
+  --primary-copy: rgb(255, 255, 255);
+  --toggle-bg: #ccc;
+  --toggle-color: rgb(50, 52, 65);
+}
 
 body {
-    font-family: system-ui;
-    color: #333;
-     line-height: 1.4;
-
-  }
+  background-color: var(--primary-bg);
+  color: var(--primary-copy);
+  transition: background .5s ease, color .5s ease;
+}
 
  
 h1, h2, h3 {
@@ -498,4 +510,36 @@ img {
 
 .accordion-content {
   /*background-color: #39b9d2;*/
+}
+
+.darkMode-selector {
+  -webkit-appearance: none;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--toggle-bg);
+  transition: background .5s ease;
+
+}
+
+.darkMode-selector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: var(--toggle-color);
+  transition: left .3s, background .5s;
+}
+
+.darkMode-selector:checked::after {
+  left: 70%;
+  background-color: var(--toggle-color);
 }
