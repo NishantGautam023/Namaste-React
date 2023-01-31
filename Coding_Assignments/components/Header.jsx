@@ -1,11 +1,12 @@
-import React , {lazy, Suspense} from "react";
+import React , {lazy, Suspense,useState,useEffect} from "react";
 import logoImage from "../assets/logo.jpg"
-import checkoutcart from "../assets/checkout.jpg"
 import { Link } from "react-router-dom";
 import ToggleTheme from "./ToggleTheme";
+import DarkMode from "./DarkMode";
 
 
 const navitems = (
+
         <>
                 <ul>
                     
@@ -33,17 +34,15 @@ const navitems = (
                 </ul>
 
                 <span className="btn-wrap">
-                    <Link to="/" className="logo-wrap">
 
-                        <img src={checkoutcart} alt="" height="70" width="70" />
-
-                    </Link>
                  </span>
         </>
 )
 
 
-const Header = ()=> {
+const Header = (props)=> {
+
+
     return (
         <> 
              <header className>
@@ -52,6 +51,9 @@ const Header = ()=> {
                     </Link>
                 
                 {navitems}
+                 <DarkMode
+                     isDarkMode={props.isDarkMode}
+                     toggleDarkMode={props.toggleDarkMode} />
             </header>        
         </>
     )
