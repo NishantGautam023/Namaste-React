@@ -20,7 +20,7 @@ const RestrauntCard = ({
                     <div className="desc">
                         <span>{name ?? "Guess the Food"}</span>
                         <h3>{cuisines.join(', ')}</h3>
-                        <h4>★ {avgRating ?? "No rating"}</h4>
+                        <h4 className="fa-solid fa-star">★ {avgRating ?? "No rating"}</h4>
                          <p>{lastMileTravelString ?? "In your Kitchen"} Minutes from your Address</p>
                         <button>Add to Cart</button>
                     </div>
