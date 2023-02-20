@@ -19,8 +19,11 @@ const Body = () => {
 
     
   async function getRestaurants() {
+      
+      // Swiggy API to get Restaurant data with corsanywhere
+      
     const data = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&page_type=DESKTOP_WEB_LISTING"
+      "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
     );
     const json = await data.json();
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
