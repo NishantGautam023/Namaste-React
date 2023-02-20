@@ -20,10 +20,10 @@ const Body = () => {
     
   async function getRestaurants() {
       
-      // Swiggy API to get Restaurant data with corsanywhere
+      // Swiggy API to get Restaurant list with Render.com
       
     const data = await fetch(
-      "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
+        "https://dishdelish.onrender.com/api/restaurants?lat=12.9351929&lng=77.62448069999999"
     );
     const json = await data.json();
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
